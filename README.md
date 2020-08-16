@@ -13,6 +13,6 @@ Commands:<br>
 	&emsp;c:clears screen(sets every cells state to dead)<br>
 	&emsp;r:randomizes every cell(50/50,alive or dead)<br>
 	<br>
-  tapping any cell:makes it change its current state  (dead<--->alive)<br>
+  &emsp;tapping any cell: makes it change its current state  (dead<--->alive)<br>
 <br>
 Have Fun! 
