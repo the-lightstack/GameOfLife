@@ -90,7 +90,7 @@ def gameOfLife(bw,bh,width,height,cols,rows):
 	for y in range(rows):
 		newCells.append([])
 		for x in range(cols):
-			newCells[y].append(Cell(x,y,False,screen,bw,bh))#bool(random.getrandbits(1)) for random 50/50
+			newCells[y].append(Cell(x,y,False,screen,bw,bh))
 
 
 	for y in range(rows):
@@ -153,22 +153,19 @@ def main():
 				elif event.key==pygame.K_c:
 					clearBoard(bw,bh,cols,rows,Width,Height,screen)
 			if event.type==pygame.MOUSEBUTTONDOWN:
-				#cells=[]
-				#initCells(bw,bh,cols,rows,Width,Height,screen)
-
-				print("Bamm")
-				print(pygame.mouse.get_pos())
+				
+			
 
 				cells[int(pygame.mouse.get_pos()[1]/bh)][int(pygame.mouse.get_pos()[0]/bw)].alive =not cells[int(pygame.mouse.get_pos()[1]/bh)][int(pygame.mouse.get_pos()[0]/bw)].alive
 				tempY=int(pygame.mouse.get_pos()[1]/bh)
 				tempX=int(pygame.mouse.get_pos()[0]/bw)
 				
-		#initCells(bw,bh,cols,rows,Width,Height,screen)
+		
 		displayCells(cells)
 		drawGrid(screen,Width,Height,bw,bh,cols,rows,(0,200,200))
 		if startSimulation:
 			gameOfLife(bw,bh,Width,Height,cols,rows)
-		#pygame.draw.rect(screen,(233,0,0),pygame.Rect(200,100,100,100))
+		
 		pygame.display.flip()
 		screen.fill((200,200,0))
 
